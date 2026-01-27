@@ -5,9 +5,9 @@ pipeline {
 		IMAGE_NAME="vishwasmagar10/dev_f"
 	}
 
-	 triggers {
-        cron('* * * * *')
-    }
+	 // triggers {
+  //       cron('* * * * *')
+  //   }
 	
 	stages {
 		stage('checkout') {
