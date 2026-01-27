@@ -2,7 +2,7 @@ pipeline {
 	agent any
 	environment {
 		DOCKERHUB_CRED=credentials('dockerhub')
-		IMAGE_NAME="rupeshmsrit/dev_f"
+		IMAGE_NAME="vishwasmagar10/dev_f"
 	}
 
 	 triggers {
@@ -12,7 +12,7 @@ pipeline {
 	stages {
 		stage('checkout') {
 			steps {
-				git url:'https://github.com/msrit-rupesh/dev_f/', branch:'main' 
+				git url:'https://github.com/vishwasmagar10/dev_f/', branch:'main' 
 			}
 		}
 		
