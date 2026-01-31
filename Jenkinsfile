@@ -44,7 +44,6 @@ pipeline {
 		}
 		always {
 			echo "Cleaning Up WorkSpace"
-			deleteDir()
 		}
 	}
 }
