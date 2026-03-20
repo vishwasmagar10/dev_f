@@ -1,8 +1,8 @@
 pipeline {
 	agent any
 	environment {
-		DOCKERHUB_CRED=credentials('dockerhub1')
-		IMAGE_NAME="vishwasmagar10/dev_f"
+		DOCKERHUB_CRED=credentials('dockerhubflask')
+		IMAGE_NAME="vishwasmagar10/dev_flask"
 	}
 
 	 // triggers {
@@ -27,7 +27,7 @@ pipeline {
 		stage('Push to DockerHub') {
 			steps {
 				script {
-					docker.withRegistry('https://index.docker.io/v1/','dockerhub1') {
+					docker.withRegistry('https://index.docker.io/v1/','dockerhubflask') {
 						dockerImage.push()
 					}
 				}
